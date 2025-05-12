@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Student Information</title>
+    <style>
+        body{
+            background: url(https://i.pinimg.com/474x/33/85/f9/3385f979f489cc4a913df42b144b2093.jpg);
+            background-size: cover;
+            color: white;
+            background-repeat: no-repeat;
+            bakgrcound-position: center;
+            background-position: absolute;
+            background-attachment: fixed;
+            font-family: "DM Mono", monospace;
+        }
+        .dm-mono-regular-italic{
+          font-family: "DM Mono", monospace;
+          font-weight: 400;
+          font-style: italic;
+        }
+        .kosugi-maru-regular{
+          font-family: "Kosugi Maru", sans-serif;
+          font-weight: 300;
+          font-style: normal;
+        }
+        .navbar{
+            background-color: #809D3C;
+            padding: 10px 20px;
+        }
+        .navbar-toggler{
+            border: none;
+        }
+        .navbar-collapse{
+            justify-content: center;
+        }
+        .nav-item a{
+            font-family: "Poppins", serif;
+            font-weight: 500;
+            color: white;
+        }
+        .nav-item a:hover{
+            color: #ddd;
+            text-decoration: none;
+        }
+        @media (max-width: 768px){
+            .navbar-brand{
+                font-size: 1.2rem;
+            }
+            .nav-item{
+                margin: 5px 0;
+            }
+            .navbar-collapse{
+                justify-content: flex-start;
+            }
+            .nav-item a{
+                font-size: 1rem;
+            }
+            .navbar{
+                padding: 10px;
+            }
+        }
+        .profile-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .profile-container img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .info-box{
+            background-color: #A4B465;
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+        .portfolio-section .row{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .col-md-3{
+            flex: 1 1 calc(25% - 20px); /* Makes sure each column fits nicely */
+            min-width: 800px; /* Ensures proper sizing on smaller screens */
+        }
+        .info-box img{
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }    
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="portfolio.png" class="rounded" alt="Logo" style="width: 40px; height: 40px; margin-left: 4px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="index.html">About Us</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="index.html">Quarterly Projects and Works</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="index.html">What's Next?</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="index.html">Rating</a>
+                    </li>
+                </ul>
+                <form class="d-flex mt-2 mt-md-0">
+                    <input class="form-control me-2" type="text" placeholder="Search...">
+                    <button class="btn btn-success" type="button">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <br><br><br>
+
+    <center>
+        <div class="profile-container">
+            <img src="santos.jpg" alt="Kirsten Santos">
+            <h2>Ashley Kirsten Santos</h2>
+            <p>OBMC Student | Attentive | Inspirational Figure</p>
+        </div>
+
+        <div class="info-box">
+            <h3>About Me</h3>
+            <p>ICT is the hardest subject this year but I learned a lot.</p>
+        </div>
+
+        <br>
+
+        <section id="projects" class="portfolio-section">
+            <h3>Projects</h3>
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-3">
+                    <div class="info-box">
+                        <h4>1st Quarter Project</h4>
+                        <p>https://ashsantos-ky.github.io/Q1Project/</p>
+                        <img src="santosq1project.png">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="info-box">
+                        <h4>2nd Quarter Project</h4>
+                        <p> https://ashsantos-ky.github.io/FV_ICT9T_Q2PROJ_Santos_Ashley/</p>
+                        <img src="santosq2project.png">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="info-box">
+                        <h4>3rd Quarter Project</h4>
+                        <p>https://ashsantos-ky.github.io/FV_ICT9T_Q3PROJ_Santos-Ecraela_Ashley-Pauline/</p>
+                        <img src="santosq3project.png">
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="info-box">
+                        <h4>4th Quarter Project</h4>
+                        <p> https://ashsantos-ky.github.io/FV_ICT9T_Q4Quiz1_Santos_Ashley/</p>
+                        <img src="santosq4qz1.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </center>
+
+</body>
+</html>

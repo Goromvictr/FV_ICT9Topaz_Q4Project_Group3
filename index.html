@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<title>Q4 Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=DM+Mono:ital@1&family=Kosugi+Maru&display=swap" rel="stylesheet">
+	<style>
+		body{
+			background: url(https://i.pinimg.com/474x/33/85/f9/3385f979f489cc4a913df42b144b2093.jpg);
+			background-size: cover;
+            color: white;
+			background-repeat: no-repeat;
+            bakgrcound-position: center;
+            background-position: absolute;
+            background-attachment: fixed;
+            font-family: "DM Mono", monospace;		
+        }
+        .dm-mono-regular-italic{
+          font-family: "DM Mono", monospace;
+          font-weight: 400;
+          font-style: italic;
+        }
+        .kosugi-maru-regular{
+          font-family: "Kosugi Maru", sans-serif;
+          font-weight: 300;
+          font-style: normal;
+        }
+		.navbar{
+            background-color: #809D3C;
+            padding: 10px 20px;
+        }
+        .navbar-toggler{
+            border: none;
+        }
+        .navbar-collapse{
+            justify-content: center;
+        }
+        .nav-item a{
+            font-family: "Poppins", serif;
+            font-weight: 500;
+            color: white;
+        }
+        .nav-item a:hover{
+            color: #ddd;
+            text-decoration: none;
+        }
+        @media (max-width: 768px){
+            .navbar-brand{
+                font-size: 1.2rem;
+            }
+            .nav-item{
+                margin: 5px 0;
+            }
+            .navbar-collapse{
+                justify-content: flex-start;
+            }
+            .nav-item a{
+                font-size: 1rem;
+            }
+            .navbar{
+                padding: 6px;
+            }
+        }
+        .headingportfolio{
+        	background-color: #A4B465;
+        	width: 35%;
+        	border-radius: 10px;
+        }
+        .headinginformation{
+            background-color: #A4B465;
+            width: 35%;
+            border-radius: 10px;
+        }
+        .headingoverview{
+            background-color: #A4B465;
+            width: 40%;
+            border-radius: 10px;
+        }
+        .whatsnext{
+            background-color: #A4B465;
+            width: 40%;
+            border-radius: 10px;
+        }
+        h2{
+            position: center;
+        }
+        section{
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            margin: 10px auto;
+            border-radius: 15px;
+            width: 90%; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            padding: 20px;
+        }
+        #students, #overview{
+            padding: 30px 20px;
+            background-color: #668355;
+            color: white;
+        }
+        #whatsnext{
+            padding: 30px 20px;
+            background-color: #668355;
+            color: white;
+            width: 70%;
+        }
+        .container2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            margin: 10px auto;
+            width: 85%;
+            max-width: 600px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: white;
+            box-sizing: border-box;
+            overflow: hidden;
+            text-decoration: none;
+            color: #B7B585;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .container2:hover{
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .container2 img{
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .container2 p{
+            font-size: 1.2em;
+            margin: 10px 0;
+            font-family: "Kosugi Maru", sans-serif;
+            color: black;
+            text-align: center; 
+            word-wrap: break-word; 
+            line-height: 1.5; 
+        }
+        .row .col-md-3{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+	</style>
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-md fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="portfolio.png" class="rounded" alt="Logo" style="width: 40px; height: 40px; margin-left: 4px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#students">About Us</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#overview">Quarterly Projects and Works</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#whatsnext">What's Next?</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#rating">Rating</a>
+                    </li>
+                </ul>
+                <form class="d-flex mt-2 mt-md-0">
+                    <input class="form-control me-2" type="text" placeholder="Search...">
+                    <button class="btn btn-success" type="button">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <br><br><br><br>
+
+	<center>
+        <div class="row justify-content-center">
+		<div class="headingportfolio"><h1>Portfolio</h1></div>
+		<p>Welcome to Babagay's Envelope! This portfolio showcases<br>the works of four students in their ICT class throughout the school year 2024-2025.<br> You may follow the navigation links to check their works.</p>
+        </div>
+	</center>
+
+    <center>
+        <section id="overview">
+            <div class="row justify-content-center">
+            <div class="headingoverview"><h1>Projects Overview</h1>
+            <p>This section contains the images and information of the projects of the students throughout the quarters.</p>
+            </div>
+            </div>
+            <br>
+            <details ontoggle="message1()">
+                    <summary>
+                        <u>Click to view overview</u>
+                        <br>
+                            <i id="message"></i>
+                    </summary>
+            <br>
+            <div class="row justify-content-center">
+                <p>For the first quarter project, we were tasked to create an online shop using HTML and Bootstrap.</p>
+                    <div>
+                            <img src="project1q.png" alt="1st Quarter Project" style="height: 450px; width: 450px;">
+                            <p><b>1st Quarter</b></p>
+                        </a>
+                    </div>
+
+                <br><br>
+
+                <p>For the second quarter prject, we were assigned to create a recipe sharing website, <br>wherein we input the recipe and instructions of a Filipino dish and where it came from.</p>
+                    <div>
+                            <img src="project2q.png" alt="1st Quarter Project" style="height: 350px; width: 650px;">
+                            <p><b>2nd Quarter</b></p>
+                        </a>
+                    </div>
+
+                <br><br>
+
+                <p>Moving on to the third quarter prject, we made a train fare guide of a transit line of our choice.</p>
+                    <div>
+                            <img src="project3q.png" alt="1st Quarter Project" style="height: 350px; width: 650px;">
+                            <p><b>3rd Quarter</b></p>
+                        </a>
+                    </div>
+
+                <br><br>
+
+                <p>Lastly, we have our quizzes for the fourth quarter where we were asked to create a score analyzer and a BMI calculator.</p>
+                    <div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: center;">
+                            <img src="quiz1q4.png" class="col-md-3" alt="1st Quarter Project" style="height: 225px; width: 425px;">
+                            <br>
+                            <img src="quiz2q4.png" class="col-md-3" alt="1st Quarter Project" style="height: 225px; width: 425px;">
+                            <p><b>4th Quarter</b></p>
+                        </a>
+                    </div> 
+                </details> 
+            </div>
+        </section>
+    </center>
+
+    <br>
+
+        <center>
+            <div class="headinginformation">
+            <h2>Student Information</h2>
+            <p>This section contains the information of the students involved in this project!</p>
+            </div>
+        </center>
+
+        <section id="students">
+            <div class="row justify-content-center">
+                <div class="col-md-3">
+                    <a href="cabrillos.html" class="container2" target="_blank">
+                        <img src="martina.jpg" alt="Martina Cabrillos">
+                        <p><b>Martina Cabrillos</b></p>
+                    </a>
+                </div>
+
+                <div class="col-md-3">
+                    <a href="gorom.html" class="container2" target="_blank">
+                        <img src="gorom.jpg" alt="Victor Gorom">
+                        <p><b>Victor Gorom</b></p>
+                    </a>
+                </div>
+
+                <div class="col-md-3">
+                    <a href="mendez.html" class="container2" target="_blank">
+                        <img src="mendez.jpg" alt="Cyrenne Grace Mendez">
+                        <p><b>Cyrenne Mendez</b></p>
+                    </a>
+                </div>
+
+                <div class="col-md-3">
+                    <a href="santos.html" class="container2" target="_blank">
+                        <img src="kirsten.jpg" alt="Kirsten Santos">
+                        <p><b>Kirsten Santos</b></p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <br>
+
+        <center>
+        <section id="whatsnext">
+            <div class="row justify-content-center">
+            <div class="whatsnext"><h1>What's Next?</h1>
+            <p>This contains what the students expect for the 10th grade level and their opinions about their ICT for this school year.</p>
+            </div>
+            </div>
+            <br>
+            <div class="row justify-content-center">
+                <p><b>Martina Cabrillos:</b><br>For grade 10, I am expecting a challenging yet informative learning for<br> us students. Wherein, this may hone our skills as young leaders and enhance our knowledge<br> towards the world of technology. Moreover, grade 9 was admittedly challenging yet it made<br> my learning towards technology more diverse as we explored different approaches to coding.<br> It was truly worth my while despite it not being my forte.</p>
+                    
+                <br><br>
+
+                <p><b>Victor Gorom:</b><br>I just want to finish Grade 9 ICT and never touch<br> Javascript again. I'm expecting more stress on coding <br> for Grade 10 ICT since it's not HTML based anymore💔.</p>
+                    
+                <br><br>
+
+                <p><b>Cyrenne Mendez:</b><br>I expect grade 10 to be a lot harder and filled with challenges that will<br> leave me drained by the end of the week. My honest opinion about grade 9 is its definitely<br> harder than the previous levels and uses more of knowledge of the app and the codes itself.</p>
+                    
+                <br><br>
+
+                <p><b>Kirsten Santos:</b><br>ICT was a tough subject for me since it required hard work and perseverance<br> in coding. I expect grade 10 to be more complicated<br> which will possibly make my grades get lower.</p>  
+            </div>
+        </section>
+    </center>
+
+    <br>
+
+    <center>
+        <h1 style="color:#24422c; font-size: 100px; font-family: DM Mono, monospace; font-weight: bolder;" id="rating">RATE US!</h1>
+
+        <form> 
+
+        <details ontoggle="guide()">
+
+        <summary style="font-weight: bolder; color:#668355; font-size: 30px; text-align:center; font-family: DM Mono, monospace;">CLICK THE ARROW FOR RATING GUIDE 🙂 !</summary>
+        <i style="color:#24422c; font-size: 20px; text-align:center; font-family:sans-serif;"id="direction"></i>
+
+        </details>
+
+        </form>
+
+        <br>
+        <form>
+
+        <div class="col-md-2">
+
+        <label style="color:#668355; font-weight: bolder; font-family: DM Mono, monospace; font-size:25px;">RATE US HERE!</label>
+        <input type="text" id="ratingss" class="form-control">
+
+        </div>
+
+        <br>
+
+        <button type="submit" class="btn" style="background-color:#24422c; color:#668355; font-family: DM Mono, monospace; font-size:15px; font-weight:bolder;" onclick="ratings()">Send!</button>
+
+        </form>
+
+        <br>
+
+    </center>
+
+        <hr style="border: 7px solid #24422c;">
+
+    <center>
+
+        <p style="font-family: DM Mono, monospace; font-size: 20px; color: #668355; font-style: italic;"> We hope to hear from you again! </p>
+
+    </center>
+
+	<script type="text/javascript">
+
+        function guide()
+        {
+            document.getElementById('direction').innerHTML = "Type the following in order to properly rate: <br> 1 - POOR <br> 2 - UNDER SATISFACTORY <br> 3 - AVERAGE <br> 4 - GREAT <br> 5 - EXCELLENT ";
+        }
+
+    </script>
+
+    <script> 
+
+        function ratings(){
+
+        var rate = document.getElementById("ratingss").value;
+        switch (rate){
+        case "1":
+            window.alert("We apologize for an unpleasant experience.");
+            break;
+        case "2":
+            window.alert("Apologies for not providing up to your standards. We ensure that we will strive to grow in all aspects.");
+            break;
+        case "3":
+            window.alert("Thank you for considering a fairly good rate! We hope to make that a 5 one day.");
+            break;
+        case "4":
+            window.alert("Yay! We love this rating:)! We hope to accomplish a bright 5 with you one day!");
+            break;
+        case "5":
+            window.alert("Thank you! We are glad that you had quality and an excellent experience with us! ");
+            break;
+        default:
+            window.alert("Please input a number from 1-5. Thank you!");
+        }
+    }
+    </script>
+</body>
+</html>
